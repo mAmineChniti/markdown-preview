@@ -35,7 +35,9 @@ function App() {
         leftTimeout = setTimeout(() => {
           const { scrollTop, scrollHeight, clientHeight } = leftSideElement;
           const ratio = (scrollTop + clientHeight) / scrollHeight;
-          const newScrollTop = ratio * rightSideElement.scrollHeight - rightSideElement.clientHeight;
+          const newScrollTop =
+            ratio * rightSideElement.scrollHeight -
+            rightSideElement.clientHeight;
           rightSideElement.scrollTop = newScrollTop;
         }, 100); // Adjust debounce delay as needed
       };
@@ -45,7 +47,8 @@ function App() {
         rightTimeout = setTimeout(() => {
           const { scrollTop, scrollHeight, clientHeight } = rightSideElement;
           const ratio = (scrollTop + clientHeight) / scrollHeight;
-          const newScrollTop = ratio * leftSideElement.scrollHeight - leftSideElement.clientHeight;
+          const newScrollTop =
+            ratio * leftSideElement.scrollHeight - leftSideElement.clientHeight;
           leftSideElement.scrollTop = newScrollTop;
         }, 100); // Adjust debounce delay as needed
       };

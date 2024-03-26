@@ -12,7 +12,7 @@ export const LeftSide: React.FC<LeftSideProps> = ({
   scrollTop,
 }) => {
   const textareaRef = useRef<HTMLTextAreaElement>(null);
-  
+
   useEffect(() => {
     if (textareaRef.current) {
       textareaRef.current.scrollTop = scrollTop;

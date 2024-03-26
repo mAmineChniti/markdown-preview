@@ -32,7 +32,11 @@ const renderCodeBlock = (code: string, language: string) => {
   );
 };
 
-export const RightSide: React.FC<RightSideProps> = ({ markdownText, onScroll, scrollTop }) => {
+export const RightSide: React.FC<RightSideProps> = ({
+  markdownText,
+  onScroll,
+  scrollTop,
+}) => {
   const previewRef = useRef<HTMLDivElement>(null);
   const [_lastScrollTop, setLastScrollTop] = useState(0);
 
@@ -69,9 +73,7 @@ export const RightSide: React.FC<RightSideProps> = ({ markdownText, onScroll, sc
         style={{ height: 'calc(100% - 10px)' }}
         onScroll={handleScroll}
       >
-        <Markdown renderer={{ code: renderCodeBlock }}>
-          {markdownText}
-        </Markdown>
+        <Markdown renderer={{ code: renderCodeBlock }}>{markdownText}</Markdown>
       </div>
     </div>
   );

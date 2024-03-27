@@ -46,7 +46,7 @@ export const RightSide: React.FC<RightSideProps> = ({
     }
   }, [scrollTop]);
 
-  const debouncedScroll = useRef<number | null>(null);
+  const debouncedScroll = useRef<NodeJS.Timeout | null>(null);
 
   const handleScroll = () => {
     if (previewRef.current) {
@@ -57,7 +57,7 @@ export const RightSide: React.FC<RightSideProps> = ({
       }
       debouncedScroll.current = setTimeout(() => {
         onScroll(newScrollTop);
-      }, 0);
+      }, 0) as unknown as NodeJS.Timeout;
     }
   };
 

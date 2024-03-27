@@ -7,12 +7,10 @@ function App() {
   const [leftScrollTop, setLeftScrollTop] = useState(0);
   const [rightScrollTop, setRightScrollTop] = useState(0);
 
-  // Callback to handle text change in the left side component
   const handleTextChange = (newText: string) => {
     setMarkdownText(newText);
   };
 
-  // Callback to handle scroll change in both components
   const handleScroll = (scrollTop: number, side: 'left' | 'right') => {
     if (side === 'left') {
       setLeftScrollTop(scrollTop);
@@ -21,7 +19,6 @@ function App() {
     }
   };
 
-  // Synchronize scrolling between the two components
   useEffect(() => {
     const leftSideElement = document.getElementById('editor');
     const rightSideElement = document.getElementById('preview');
@@ -39,7 +36,7 @@ function App() {
             ratio * rightSideElement.scrollHeight -
             rightSideElement.clientHeight;
           rightSideElement.scrollTop = newScrollTop;
-        }, 100); // Adjust debounce delay as needed
+        }, 0);
       };
 
       const handleRightScroll = () => {
@@ -50,7 +47,7 @@ function App() {
           const newScrollTop =
             ratio * leftSideElement.scrollHeight - leftSideElement.clientHeight;
           leftSideElement.scrollTop = newScrollTop;
-        }, 100); // Adjust debounce delay as needed
+        }, 0);
       };
 
       leftSideElement.addEventListener('scroll', handleLeftScroll);

@@ -26,7 +26,7 @@ const renderCodeBlock = (code: string, language: string) => {
   }
 
   return (
-    <pre className={`language-${language || 'plaintext'}`}>
+    <pre className={`language-${language}`}>
       <code dangerouslySetInnerHTML={{ __html: highlightedCode }} />
     </pre>
   );
@@ -42,7 +42,9 @@ export const RightSide: React.FC<RightSideProps> = ({
 
   useEffect(() => {
     if (previewRef.current && previewRef.current.scrollTop !== scrollTop) {
-      previewRef.current.scrollTop = scrollTop;
+      if (!debouncedScroll.current) {
+        previewRef.current.scrollTop = scrollTop;
+      }
     }
   }, [scrollTop]);
 
@@ -57,7 +59,7 @@ export const RightSide: React.FC<RightSideProps> = ({
       }
       debouncedScroll.current = setTimeout(() => {
         onScroll(newScrollTop);
-      }, 0) as unknown as NodeJS.Timeout;
+      }, 0);
     }
   };
 

@@ -15,7 +15,9 @@ export const LeftSide: React.FC<LeftSideProps> = ({
 
   useEffect(() => {
     if (textareaRef.current) {
-      textareaRef.current.scrollTop = scrollTop;
+      if (!debouncedScroll.current) {
+        textareaRef.current.scrollTop = scrollTop;
+      }
     }
   }, [scrollTop]);
 

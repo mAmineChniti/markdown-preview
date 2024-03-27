@@ -9,12 +9,17 @@ module.exports = {
     'plugin:react-hooks/recommended',
     'plugin:@typescript-eslint/stylistic-type-checked',
   ],
-  ignorePatterns: ['dist', '.eslintrc.cjs', 'node_modules', 'src/_codux/'],
+  ignorePatterns: ['dist', '.eslintrc.cjs', 'node_modules', 'src/_codux/', 'vite.config.ts'],
   parser: '@typescript-eslint/parser',
   "parserOptions": {
     "project": "./tsconfig.json"
   },
-  plugins: ['react-refresh'],
+  plugins: ['react-refresh', 'react'],
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
   rules: {
     'react-refresh/only-export-components': [
       'warn',

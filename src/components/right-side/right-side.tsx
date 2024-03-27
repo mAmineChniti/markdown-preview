@@ -14,7 +14,7 @@ const renderCodeBlock = (code: string, language: string) => {
   if (!Prism.languages[language]) {
     highlightedCode = Prism.highlight(
       code,
-      Prism.languages['plaintext'],
+      Prism.languages.plaintext,
       'plaintext'
     );
   } else {
@@ -38,7 +38,7 @@ export const RightSide: React.FC<RightSideProps> = ({
   scrollTop,
 }) => {
   const previewRef = useRef<HTMLDivElement>(null);
-  const [_lastScrollTop, setLastScrollTop] = useState(0);
+  const setLastScrollTop = useState(0)[1];
 
   useEffect(() => {
     if (previewRef.current && previewRef.current.scrollTop !== scrollTop) {

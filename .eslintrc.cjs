@@ -11,6 +11,9 @@ module.exports = {
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs', 'node_modules', 'src/_codux/'],
   parser: '@typescript-eslint/parser',
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
   plugins: ['react-refresh'],
   rules: {
     'react-refresh/only-export-components': [

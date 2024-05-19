@@ -20,13 +20,14 @@ module.exports = {
   parserOptions: {
     project: './tsconfig.json',
   },
-  plugins: ['react-refresh', 'react'],
+  plugins: ['react-refresh', 'react', 'eslint-plugin-react-compiler'],
   settings: {
     react: {
       version: 'detect',
     },
   },
   rules: {
+    'react-compiler/react-compiler': "error",
     'react-refresh/only-export-components': [
       'warn',
       { allowConstantExport: true },

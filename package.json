@@ -11,6 +11,7 @@
     "format": "prettier --write ."
   },
   "dependencies": {
+    "eslint-plugin-react-compiler": "^0.0.0-experimental-c8b3f72-20240517",
     "marked-react": "^2.0.0",
     "prismjs": "^1.29.0",
     "react": "^18.2.0",
@@ -26,6 +27,7 @@
     "@vitejs/plugin-react-swc": "^3.5.0",
     "@wixc3/react-board": "^2.4.1",
     "autoprefixer": "^10.4.19",
+    "babel-plugin-react-compiler": "^0.0.0-experimental-592953e-20240517",
     "eslint": "^8.57.0",
     "eslint-plugin-react": "^7.34.1",
     "eslint-plugin-react-hooks": "^4.6.0",

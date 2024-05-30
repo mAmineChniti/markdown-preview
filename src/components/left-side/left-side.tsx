@@ -50,7 +50,7 @@ export const LeftSide: React.FC<LeftSideProps> = ({
       <textarea
         ref={textareaRef}
         id="editor"
-        className="w-full border-none outline-none resize-none pt-5 pl-5 bg-red-400 text-white"
+        className="w-full border-none outline-none resize-none pt-5 pl-5 bg-red-400 text-white placeholder:text-white"
         style={{ height: 'calc(100% - 10px)' }}
         onChange={handleTextAreaChange}
         onScroll={handleScroll}

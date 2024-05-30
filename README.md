@@ -1,30 +1,11 @@
-# React + TypeScript + Vite
+# Markdown Preview
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Markdown Preview is a web application that allows users to preview their Markdown files side by side. This tool is ideal for writers, developers, and anyone who frequently works with Markdown. With real-time rendering, you can see how your Markdown content will look once it’s converted to HTML.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-};
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- **Real-time Preview**: As you type your Markdown content on one side, the preview is updated instantly on the other side.
+- **Syntax Highlighting**: Supports syntax highlighting for code blocks.
+- **Live URL Links**: Clickable links in the preview.
+- **Image Rendering**: Displays images embedded in your Markdown.
+- **Responsive Design**: Works on both desktop and mobile devices.
